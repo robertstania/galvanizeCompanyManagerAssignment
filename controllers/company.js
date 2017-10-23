@@ -16,8 +16,8 @@ module.exports = {
             })
 
       }else{
+        knex('users')
           .where('id', req.session.user)
-          knex('users')
           .then((result)=>{
             let logged_user = result[0]
 
